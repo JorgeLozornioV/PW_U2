@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo Michoacán - Proyecto Integrador</title>
+    <style>
+        /* Modelo de Caja y Reset Universal */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Contenedor Principal (Modelo de Caja) */
+        .contenedor-proyecto {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Header Estilo Zamora (Azul) */
+        header {
+            background-color: #2980b9;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .titulo-destacado {
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #1a252f;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* DISEÑO DE CARDS (3 por fila, imágenes arriba) */
+        .galeria-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        /* Ajuste de imagen: solo arriba y sin deformarse */
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-body { padding: 15px; }
+        .card-title { font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; color: #2980b9; }
+
+        /* Formatos Requeridos (Alineación y Texto) */
+        .seccion-texto { padding: 40px; }
+        .izq { text-align: left; }
+        .der { text-align: right; }
+
+        /* Tablas y Listas */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #2980b9; color: white; }
+
+        .lista-info { margin-left: 40px; margin-bottom: 20px; }
+
+        /* Formulario */
+        .formulario-contacto { background: #fdfdfd; padding: 30px; border-radius: 8px; border: 1px solid #eee; }
+        .campo { margin-bottom: 15px; }
+        input, select, textarea { width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #ccc; }
+
+        footer { text-align: center; padding: 20px; background: #1a252f; color: #bdc3c7; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-proyecto">
+        
+        <header>
+            <h1 class="titulo-destacado">Michoacán: El Alma de México</h1>
+            <p>Descubre los tesoros del estado desde la región de Zamora</p>
+        </header>
+
+        <nav>
+            <a href="#lugares">Lugares</a>
+            <a href="#info">Información</a>
+            <a href="#registro">Contacto</a>
+        </nav>
+
+        <section id="lugares" class="seccion-texto">
+            <h2 class="titulo-destacado" style="font-size: 2rem; color: #2c3e50; text-align: center;">Catálogo de Destinos</h2>
+            <div class="galeria-cards">
+                
+                <article class="card">
+                    <img src="img/santuario.jpg" alt="Santuario">
+                    <div class="card-body">
+                        <h3 class="card-title">Santuario Guadalupano</h3>
+                        <p>Ubicado en Zamora, destaca por su imponente arquitectura neogótica y sus torres monumentales.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/presa_de_la_luz.jpg" alt="Presa de la Luz">
+                    <div class="card-body">
+                        <h3 class="card-title">La Presa de la Luz</h3>
+                        <p>Manantial cristalino en Jacona, ideal para la convivencia familiar y el contacto con la naturaleza.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/camecuaro.jpg" alt="Camécuaro">
+                    <div class="card-body">
+                        <h3 class="card-title">Lago de Camécuaro</h3>
+                        <p>Aguas profundas y árboles ancestrales en un parque nacional único cerca de Zamora.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="img/ixtlan.jpg" alt="Géiser">
+                    <div class="card-body">
+                        <h3 class="card-title">Géiser de Ixtlán</h3>
+                        <p>Espectacular chorro de agua caliente que brota de la tierra en la vecina población de Ixtlán.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="tu-imagen-estancia.jpg" alt="La Estancia">
+                    <div class="card-body">
+                        <h3 class="card-title">La Estancia</h3>
+                        <p>Zona agrícola y ganadera tradicional que muestra la esencia de la vida rural michoacana.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="tu-imagen-monarca.jpg" alt="Mariposa Monarca">
+                    <div class="card-body">
+                        <h3 class="card-title">Santuario Monarca</h3>
+                        <p>Bosques protegidos que cada año reciben la migración de la mariposa monarca.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="tu-imagen-azufres.jpg" alt="Los Azufres">
+                    <div class="card-body">
+                        <h3 class="card-title">Los Azufres</h3>
+                        <p>Famoso centro turístico con aguas termales y lagunas en lo alto de la sierra.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="tu-imagen-maruata.jpg" alt="Maruata">
+                    <div class="card-body">
+                        <h3 class="card-title">Playa Maruata</h3>
+                        <p>Playa virgen de la costa michoacana conocida por sus formaciones rocosas únicas.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img src="tu-imagen-playaazul.jpg" alt="Playa Azul">
+                    <div class="card-body">
+                        <h3 class="card-title">Playa Azul</h3>
+                        <p>Centro turístico costero ideal para el descanso y la observación de tortugas marinas.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="info" class="seccion-texto">
+            <div class="izq">
+                <h2 class="titulo-destacado" style="font-size: 1.8rem; color: #2980b9;">Clima y Entorno</h2>
+                <p>La región de Zamora ofrece un clima templado ideal. No olvides mantenerte hidratado, el consumo de <strong>H<sub>2</sub>O</strong> es vital durante los recorridos.</p>
+            </div>
+            <br>
+            <div class="der">
+                <h2 class="titulo-destacado" style="font-size: 1.8rem; color: #2980b9;">Inspiración Viajera</h2>
+                <p>Explorar Michoacán genera una energía positiva, tal como dicta la física con <strong>Energía = mc<sup>2</sup></strong>. ¡Atrévete a conocerlo!</p>
+            </div>
+        </section>
+
+        <section class="seccion-texto">
+            <h3>Top 5 Experiencias</h3>
+            <ol class="lista-info">
+                <li>Fotografía neogótica en el Santuario.</li>
+                <li>Paseo en lancha en Camécuaro.</li>
+                <li>Baño termal en Los Azufres.</li>
+                <li>Ver el géiser en Ixtlán de los Hervores.</li>
+                <li>Degustación de Chongos Zamoranos.</li>
+            </ol>
+
+            <h3>Costos Promedio por Destino</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Lugar</th>
+                        <th>Acceso</th>
+                        <th>Costo Sugerido</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Parques Naturales</td>
+                        <td>Entrada General</td>
+                        <td>$60 - $80 MXN</td>
+                    </tr>
+                    <tr>
+                        <td>Santuario Monarca</td>
+                        <td>Guía Local</td>
+                        <td>$100 MXN</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="registro" class="seccion-texto">
+            <h2 class="titulo-destacado" style="font-size: 2rem; color: #27ae60; text-align: center;">Planea tu Ruta</h2>
+            <form class="formulario-contacto">
+                <div class="campo">
+                    <label>Nombre Completo:</label>
+                    <input type="text" placeholder="Tu nombre" required>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="campo" style="flex: 1;">
+                        <label>Apellido Paterno:</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="campo" style="flex: 1;">
+                        <label>Apellido Materno:</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="campo" style="flex: 1;">
+                        <label>Fecha Estimada:</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="campo" style="flex: 1;">
+                        <label>Teléfono:</label>
+                        <input type="tel" placeholder="351 000 0000">
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Correo Electrónico:</label>
+                    <input type="email" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="campo">
+                    <label>Domicilio:</label>
+                    <textarea rows="2"></textarea>
+                </div>
+                <button type="submit" style="background: #2980b9; color: white; border: none; padding: 12px; cursor: pointer; width: 100%; border-radius: 4px; font-weight: bold;">
+                    Solicitar Información de Viaje
+                </button>
+            </form>
+            <p style="text-align: center; margin-top: 15px;">
+                ¿Consultas rápidas? <a href="mailto:turismo_michoacan@ejemplo.com">Escríbenos por Email</a>
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Proyecto Programación Web | Unidad 2 | Zamora, Michoacán 2026</p>
+    </footer>
+
+</body>
+</html>
