@@ -149,14 +149,24 @@
 
             <div class="contenido-header">
                 <h1 class="titulo-destacado">Michoacán: El Alma de México</h1>
-                <p>Descubre los tesoros del estado desde la región de Zamora</p>
+                <p>Descubre los tesoros que esconde este hermoso estado</p>
             </div>
         </header>
 
-        <nav>
-            <a href="#lugares">Lugares</a>
-            <a href="#info">Información</a>
-            <a href="#registro">Contacto</a>
+        <nav style="background-color: #1a252f; padding: 10px 20px; text-align: center; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    
+            <div style="flex-grow: 1; text-align: center;">
+                <a href="#lugares" style="color: #ecf0f1; text-decoration: none; margin: 0 15px; font-weight: bold;">Lugares</a>
+                <a href="#info" style="color: #ecf0f1; text-decoration: none; margin: 0 15px; font-weight: bold;">Información</a>
+                <a href="#registro" style="color: #ecf0f1; text-decoration: none; margin: 0 15px; font-weight: bold;">Contacto</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px;">
+                <span style="color: #ecf0f1; font-size: 0.7rem; font-style: italic;">Escuchar ambiente:</span>
+                <audio controls style="height: 24px; width: 150px; filter: invert(100%) brightness(1.5);">
+                    <source src="audio/caminos.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </nav>
 
         <section id="lugares" class="seccion-texto">

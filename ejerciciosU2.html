@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencia Integrada: Programación Web</title>
+    
+    <style>
+        /* i) Selectores en CSS y j) Modelo de caja */
+        /* Selector Universal */
+        * {
+            box-sizing: border-box; /* Asegura compatibilidad de modelo de caja */
+        }
+
+        /* Requisito Diapositivas: Letra Arial, color de texto y fondo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #2c3e50;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Selector de Clase: Aplicación de modelo de caja */
+        .contenedor-principal {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border: 2px solid #34495e;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Requisito Diapositivas: Títulos grandes, negrita y cursiva */
+        .titulo-formato {
+            font-size: 2.8rem;
+            font-weight: bold;
+            font-style: italic;
+            color: #2980b9;
+        }
+
+        /* Requisito Diapositivas: Alineaciones */
+        .izq { text-align: left; }
+        .der { text-align: right; }
+
+        /* Requisito Diapositivas: Sangría en listas */
+        .lista-articulos {
+            margin-left: 50px;
+            line-height: 1.8;
+        }
+
+        /* Estilos para d) Tablas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: center;
+        }
+        th { background-color: #ecf0f1; }
+
+        /* Estilos para objetos multimedia */
+        .media-box {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        /* Imagen pequeña (Requisito Diapositivas) */
+        .img-small { width: 120px; height: auto; }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        
+        <header class="izq">
+            <h1 class="titulo-formato">Parrafo #1</h1>
+            <p>Este párrafo está alineado a la <strong>izquierda</strong>. Ejemplo de superíndice: E = mc<sup>2</sup>.</p>
+        </header>
+
+        <section class="der">
+            <h2 class="titulo-formato">Parrafo #2</h2>
+            <p>Este párrafo está alineado a la <strong>derecha</strong>. Ejemplo de subíndice: La fórmula del agua es H<sub>2</sub>O.</p>
+        </section>
+
+        <hr>
+
+        <nav>
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="https://www.youtube.com" target="_blank">Vínculo a YouTube</a></li>
+                <li><a href="mailto:tu-correo@ejemplo.com?subject=Consulta">Enviar un Email </a></li>
+                <li><a href="#seccion-formularios">Ir al Formulario</a></li>
+            </ul>
+        </nav>
+
+        <hr>
+
+        <section>
+            <h3>Menú de Artículos</h3>
+            <ol class="lista-articulos">
+                <li>Procesador Intel i7</li>
+                <li>Memoria RAM 16GB</li>
+                <li>Disco SSD 1TB</li>
+                <li>Tarjeta de Video RTX</li>
+                <li>Fuente de Poder 750W</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Tabla de Compatibilidad de Navegadores</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Elemento</th>
+                        <th>Chrome</th>
+                        <th>Firefox</th>
+                        <th>Edge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Box Model</td>
+                        <td>Compatible</td>
+                        <td>Compatible</td>
+                        <td>Compatible</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section class="media-box">
+            <h3>Elementos Multimedia</h3>
+            
+            <p><strong>Imagen pequeña:</strong></p>
+            <img src="https://imgs.search.brave.com/0jMEbl-2WeSaQHRXZ2T0rRRxpr6bYa9d5QILr3u6B8M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly8xMDAw/bG9nb3MubmV0L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE3LzA1/L1lvdXR1YmUtTG9n/by01MDB4MjgxLnBu/Zw" alt="Logo pequeño" class="img-small">
+
+            <p><strong>Video:</strong></p>
+            <video width="400" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+
+            <p><strong>Audio:</strong></p>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            </audio>
+        </section>
+
+        <hr>
+
+        <section id="seccion-formularios">
+            <h3>Formulario de Registro</h3>
+            <form action="#">
+                <label for="user">Nombre de usuario:</label><br>
+                <input type="text" id="user" name="user" required><br><br>
+
+                <label for="opciones">Selecciona una categoría:</label><br>
+                <select id="opciones" name="opciones">
+                    <option value="web">Desarrollo Web</option>
+                    <option value="db">Bases de Datos</option>
+                </ol><br><br>
+
+                <button type="submit">Registrar Datos</button>
+            </form>
+        </section>
+
+    </div>
+
+</body>
+</html>
